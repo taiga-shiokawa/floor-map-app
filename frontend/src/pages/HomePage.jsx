@@ -44,10 +44,18 @@ const HomePage = () => {
     try {
       setIsLoading(true);
       const response = await apiRequest.post("/upload/floor-map", formData);
+      
+      // 成功・失敗に関わらず、レスポンスをそのままsearchResultにセット
       setSearchResult(response.data);
       setIsModalOpen(true);
     } catch (error) {
       console.error("Error uploading image:", error);
+      // エラー時のsearchResultをセット
+      setSearchResult({
+        success: false,
+        guidance: "エラーが発生しました。もう一度、正確な店舗名でお試しください。"
+      });
+      setIsModalOpen(true);
     } finally {
       setIsLoading(false);
     }
@@ -119,7 +127,7 @@ const HomePage = () => {
                   />
                   <p className="store-search-tips">※正式名称を入力するとより正確に検索できます。</p>
                   <button type="submit" className="search-button">
-                    Search Store
+                    検索
                   </button>
                 </div>
               </div>
