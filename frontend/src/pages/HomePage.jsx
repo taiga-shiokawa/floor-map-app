@@ -117,6 +117,30 @@ const HomePage = () => {
                   className="image-preview"
                 />
                 <div className="store-query-section">
+                  <div className="upload-options">
+                    <p>選び直す</p>
+                    <button
+                      type="button"
+                      className="upload-button"
+                      onClick={handleButtonClick}
+                    >
+                      <span className="button-icon">📁</span>
+                      アップロード
+                    </button>
+                    
+                    <div className="divider">
+                      <span>or</span>
+                    </div>
+                    
+                    <button
+                      type="button"
+                      className="camera-button"
+                      onClick={() => setShowCamera(true)}
+                    >
+                      <span className="button-icon">📷</span>
+                      カメラを起動
+                    </button>
+                  </div>
                   <input
                     type="text"
                     value={storeQuery}
