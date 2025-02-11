@@ -1,10 +1,97 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+
+    <!-- Vercel Analytics -->
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <!-- 基本的なメタタグ -->
+    <meta name="description" content="sokodokoは、AIを活用したフロアマップナビゲーションアプリです。施設内の目的のお店や場所をAIが素早く見つけ出し、スムーズな案内を実現します。商業施設、オフィスビル、展示場などでの店舗・施設検索に最適です。" />
+    <meta name="keywords" content="sokodoko, ソコドコ, フロアマップ, 店舗検索, AI案内, 施設案内, ナビゲーション, 屋内マップ, 商業施設, ショッピングモール" />
+    <meta name="author" content="sokodoko" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://sokodoko.com/" />
+    
+    <!-- タイトルタグの最適化 -->
+    <title>sokodoko - AIによるフロアマップ店舗検索 | スマート施設案内アプリ</title>
+
+    <!-- WebSiteスキーマの追加 -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "sokodoko",
+        "alternateName": ["ソコドコ", "そこどこ"],
+        "url": "https://sokodoko.com/",
+        "description": "AIを活用したフロアマップナビゲーションアプリ、sokodoko（ソコドコ）。施設内の目的のお店や場所をAIが素早く見つけ出し、スムーズな案内を実現します。",
+        "publisher": {
+          "@type": "Organization",
+          "name": "sokodoko",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://sokodoko.com/public/favicon.ico"
+          }
+        }
+      }
+    </script>
+
+    <!-- SoftwareApplication スキーマの追加 -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "sokodoko",
+        "applicationCategory": "NavigationApplication",
+        "operatingSystem": "Web",
+        "description": "AIを活用したフロアマップナビゲーションアプリ。施設内の目的地をスマートに案内します。",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "JPY"
+        },
+        "features": [
+          "AIによる店舗検索",
+          "フロアマップナビゲーション",
+          "施設案内",
+          "直感的なインターフェース"
+        ]
+      }
+    </script>
+    
+    <!-- OGP タグ -->
+    <meta property="og:site_name" content="sokodoko" />
+    <meta property="og:title" content="sokodoko - AIによるフロアマップ店舗検索" />
+    <meta property="og:description" content="AIを活用したフロアマップナビゲーションアプリ。施設内の目的のお店や場所をAIが素早く見つけ出し、スムーズな案内を実現します。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sokodoko.com/" />
+    <meta property="og:image" content="https://sokodoko.com/public/favicon.ico" />
+    <meta property="og:image:alt" content="sokodoko（ソコドコ）ロゴ" />
+    <meta property="og:locale" content="ja_JP" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="sokodoko - AIによるフロアマップ店舗検索" />
+    <meta name="twitter:description" content="AIを活用したフロアマップナビゲーションアプリ。施設内の目的のお店や場所をAIが素早く見つけ出し、スムーズな案内を実現します。" />
+    <meta name="twitter:image" content="https://sokodoko.com/public/favicon.ico" />
+    
+    <!-- フォントとファビコン -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="./public/favicon.ico" />
+    <link rel="apple-touch-icon" href="./public/favicon.ico" />
   </head>
   <body>
     <div id="root"></div>

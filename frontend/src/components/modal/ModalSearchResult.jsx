@@ -6,7 +6,7 @@ const ModalSearchResult = ({ guidance, isOpen, onClose }) => {
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       <div className="modal-search-result">
-        <h2 className="modal-search-result__title">Store Location Guide</h2>
+        <h2 className="modal-search-result__title">sokodoko AI ガイド</h2>
         <div className="modal-search-result__content">
           <SearchResult guidance={guidance} />
         </div>

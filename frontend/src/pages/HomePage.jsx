@@ -56,10 +56,9 @@ const HomePage = () => {
   return (
     <div className="home">
       <section className="hero">
-        <h1>Find Stores Easily</h1>
+        <h1>目的地をすぐに見つけよう</h1>
         <p>
-          Take a photo of any floor map and instantly search for stores using
-          AI-powered text recognition.
+        フロアマップをアップロードまたは写真に撮ると、AI によるテキスト認識を使用して目的の店舗を即座に検索できます。
         </p>
       </section>
 
@@ -82,7 +81,7 @@ const HomePage = () => {
                   onClick={handleButtonClick}
                 >
                   <span className="button-icon">📁</span>
-                  Upload Floor Map
+                  アップロード
                 </button>
                 
                 <div className="divider">
@@ -95,7 +94,7 @@ const HomePage = () => {
                   onClick={() => setShowCamera(true)}
                 >
                   <span className="button-icon">📷</span>
-                  Take Photo
+                  カメラを起動
                 </button>
               </div>
             ) : (
