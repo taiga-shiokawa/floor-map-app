@@ -3,8 +3,12 @@ import dotenv from 'dotenv'
 import UploadFloorMapRouter from "./routes/upload-floor-map.route.js";
 import cors from "cors";
 
+import path from "path";
+
 dotenv.config();
 const PORT = process.env.LOCAL_PORT || 5000;
+
+const __dirname = path.resolve();
 
 const app = express();
 
@@ -17,6 +21,13 @@ app.use(cors({
 }));
 
 app.use("/api/upload", UploadFloorMapRouter);
+
+if (process.env.NODE_ENV === "production") {
+	app.use(express.static(path.join(__dirname, "/frontend/dist")));
+	app.get("*", (req, res) => {
+		res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
+	});
+}
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
