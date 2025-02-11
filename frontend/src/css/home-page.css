@@ -20,6 +20,16 @@
   margin-bottom: 1rem;
 }
 
+.hero h1 .phone {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+/* 通常のビューポートでは改行を非表示 */
+.phone-break {
+  display: none;
+}
+
 .hero p {
   font-size: 1.2rem;
   color: #666;
@@ -185,6 +195,11 @@
   width: 100%;
 }
 
+.store-search-tips {
+  font-size: small;
+  color: #888;
+}
+
 @media (max-width: 768px) {
   .home {
     padding: 1rem;
@@ -193,9 +208,19 @@
   .hero {
     padding: 2rem;
   }
-  
+
   .hero h1 {
     font-size: 2rem;
+  }
+  
+  .hero h1 .phone {
+    font-size: 2rem;
+    display: inline-block; /* ブロック要素として表示 */
+  }
+
+  /* スマホ画面では改行を表示 */
+  .phone-break {
+    display: block;
   }
   
   .hero p {

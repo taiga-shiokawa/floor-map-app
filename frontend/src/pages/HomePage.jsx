@@ -56,7 +56,11 @@ const HomePage = () => {
   return (
     <div className="home">
       <section className="hero">
-        <h1>目的地をすぐに見つけよう</h1>
+      <h1>
+        目的地をすぐに
+        <br className="phone-break" />
+        <span className="phone">見つけよう</span>
+      </h1>
         <p>
         フロアマップをアップロードまたは写真に撮ると、AI によるテキスト認識を使用して目的の店舗を即座に検索できます。
         </p>
@@ -109,10 +113,11 @@ const HomePage = () => {
                     type="text"
                     value={storeQuery}
                     onChange={(e) => setStoreQuery(e.target.value)}
-                    placeholder="Enter the store you're looking for"
+                    placeholder="店舗名を入力"
                     className="store-input"
                     name="store"
                   />
+                  <p className="store-search-tips">※正式名称を入力するとより正確に検索できます。</p>
                   <button type="submit" className="search-button">
                     Search Store
                   </button>
